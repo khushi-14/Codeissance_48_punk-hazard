@@ -1,16 +1,16 @@
-from flask import Flask, redirect, request, render_template
+from flask import Flask, redirect, request
 
 import stripe
 # This is your test secret API key.
 stripe.api_key = 'sk_test_51Ll94ISAAg18wyqJX2nsGW6qrr5Lw7LooFrfLhJNZEdVwQ9htxTSE39JCyF7xPgH8ySL07BFXuz6ybOM9WbvpSMK005shgd3oM'
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='public')
 
 YOUR_DOMAIN = 'http://localhost:5500'
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    return render_template('checkout.html')
+
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     try:
@@ -33,4 +33,4 @@ def create_checkout_session():
 
 
 if __name__ == '__main__':
-    app.run(port=4343,debug=True)
+    app.run(port=5500,debug=True)
