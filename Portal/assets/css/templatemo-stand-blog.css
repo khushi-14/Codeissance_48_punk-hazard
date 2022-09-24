@@ -667,14 +667,14 @@ ul.page-numbers li a:hover {
 footer {
 	margin-top: 100px;
 	text-align: center;
-	background-color: #20232e;
+	background-color: #008374;
 	padding: 60px 60px;
 }
 
 footer ul.social-icons {
 	padding-bottom: 60px;
 	margin-bottom: 60px;
-	border-bottom: 1px solid rgba(250,250,250,0.15);
+	border-bottom: 1px solid rgb(231, 228, 228);
 }
 
 footer ul.social-icons li {
@@ -716,7 +716,7 @@ footer p {
 }
 
 footer p a {
-	color: #f85a40;
+	color: #ffffff;
 }
 
 footer p a:hover {
