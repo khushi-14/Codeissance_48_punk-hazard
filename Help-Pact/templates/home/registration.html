@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Registration Page</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="https://i.ibb.co/chHvG5C/icons8-helping-96.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../../static/home/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../static/home/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../../static/home/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../../static/home/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../static/home/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="../../static/home/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header" class="header d-flex align-items-center">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="/" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1>Help-Pact<span>.</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/socialworker">Social Service</a></li>
+            <li><a href="/donate">Donate</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Log in</a></li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        color: #384047;
+      }
+
+      form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="datetime"],
+      input[type="email"],
+      input[type="number"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="time"],
+      input[type="url"],
+      textarea,
+      select {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 15px;
+        width: 100%;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+        margin-bottom: 30px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+      }
+
+      select {
+        padding: 6px;
+        height: 32px;
+        border-radius: 2px;
+      }
+
+      button {
+        padding: 19px 39px 18px 39px;
+        color: #fff;
+        background-color: #008374;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #008374;
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        margin-bottom: 10px;
+      }
+
+      fieldset {
+        margin-bottom: 30px;
+        border: none;
+      }
+
+      legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      label.light {
+        font-weight: 300;
+        display: inline;
+      }
+
+      .number {
+        background-color: #008374;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+      }
+
+      @media screen and (min-width: 480px) {
+        form {
+          max-width: 480px;
+        }
+      }
+    </style>
+
+    <br />
+    <br />
+
+    <!-- ======= Start of social worker form ======= -->
+    <div id="social" class="row">
+      <div class="col-md-12">
+        <form action="/" method="post">
+          <b><h1 style="font-family: 400%">Registration</h1></b>
+          <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="mail" name="user_email" />
+
+            <label for="password">Mobile Number:</label>
+            <input type="password" id="password" name="user_password" />
+
+            <label>Age:</label>
+            <input
+              type="radio"
+              id="under_13"
+              value="under_13"
+              name="user_age"
+            /><label for="under_13" class="light">Under 18</label><br />
+            <input
+              type="radio"
+              id="over_13"
+              value="over_13"
+              name="user_age"
+            /><label for="over_13" class="light">Over 18</label><br /><br />
+
+            <label for="password">Username:</label>
+            <input type="text" id="username" name="username" />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+
+            <label for="password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+            />
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <!-- End of social worker form -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="/" class="logo d-flex align-items-center">
+              <span>Help-Pact</span>
+            </a>
+            <p>
+              An online platform to equip the common man with the emergency
+              services pertaining to house crimes, disaster management etc.
+            </p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="/socialworker">Social Service</a></li>
+              <li><a href="/donate">Donate</a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>
+              Mumbai, Maharashtra<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 9082102258<br />
+              <strong>Email:</strong> helppact@gmail.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../../static/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/home/vendor/aos/aos.js"></script>
+    <script src="../../static/home/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../static/home/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../static/home/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../static/home/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../static/home/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../static/home/js/main.js"></script>
+  </body>
+</html>

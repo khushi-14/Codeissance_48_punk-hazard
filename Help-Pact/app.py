@@ -8,9 +8,13 @@ app = Flask(__name__)
 
 YOUR_DOMAIN = 'http://localhost:5500'
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    return render_template('checkout.html')
+@app.route('/')
+def hello():
+    return render_template('test.html')
+
+# @app.route('/', methods=['GET', 'POST'])
+# def index():
+#     return render_template('checkout.html')
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     try:
@@ -33,4 +37,4 @@ def create_checkout_session():
 
 
 if __name__ == '__main__':
-    app.run(port=4343,debug=True)
+    app.run(port=5500,debug=True)

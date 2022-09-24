@@ -9,8 +9,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, "client")));
 app.use(bodyParser.json())
 
-const publicVapidKey = 'BL42U0ytyF3MmvfMq6B6PT3EHMUzIftlKVB_mqJJA8zKIuoa91-otQVxGpFRpdxwKDaatAjBuvL_mkZ99ZsfyRo';
-const privateVapidKey = 'gSJThoNubY-pH4hRajgGJHEOhOJSkjidP9Xly5uVe4A';
+const publicVapidKey = 'BKOEWydKLUsPk3Z14L5vItv3pRwBluxpYRlnz5krTw6pU0NDISIZ8-xZ78_AH_MJsY-hloygx-F-ZH1hitb0Uko';
+const privateVapidKey = 'cOCzAzStNWrcgSytNSMN2EbVY_f8VFh-1qxS4KBp-TM';
 
 webpush.setVapidDetails('mailto:test@test.com', publicVapidKey,privateVapidKey);
 
